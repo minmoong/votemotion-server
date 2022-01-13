@@ -34,11 +34,11 @@ const bcrypt = require("bcrypt");
 
 const mysql = require("mysql");
 const db = mysql.createPool({
-  host: "minmoong.cafe24.com",
-  user: "minmoong",
-  password: "Minmoongsdft8753",
-  port: 3306,
-  database: "minmoong",
+  host: process.env.DB_HOST,
+  user: process.env.DB_USER,
+  password: process.env.DB_PW,
+  port: process.env.DB_PORT,
+  database: process.env.DB_DB,
   typeCast: field => field.string()
 });
 
