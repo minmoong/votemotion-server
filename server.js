@@ -25,6 +25,7 @@ app.use(
     cookie: {
       expires: 60 * 60 * 24 * 1000,
       httpOnly: true,
+      sameSite: "none"
       // secure: true //////////////////////////////////////////////////////////////////////////
     }
   })
@@ -518,4 +519,4 @@ app.post("/api/voting", (req, res) => {
   );
 });
 
-app.listen(4000);
+app.listen(8080);
