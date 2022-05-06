@@ -25,8 +25,8 @@ app.use(
     cookie: {
       expires: 60 * 60 * 24 * 1000,
       httpOnly: true,
-      sameSite: "none", // [주의] 서버 SSL 설정 완료 후 활성화 할 것.
-      secure: true
+      // sameSite: "none", // [주의] 쿠키를 먹어치워버리고 싶다면 주석을 지워라!
+      // secure: true
     }
   })
 );
